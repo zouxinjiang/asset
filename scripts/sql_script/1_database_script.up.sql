@@ -63,6 +63,8 @@ CREATE TABLE "axes_user" (
     "email" varchar(255) COLLATE "default",
     "user_source_id" int8 NOT NULL,
     "origin_id" text COLLATE "default",
+    "created_at" timestamptz DEFAULT now(),
+    "updated_at" timestamptz DEFAULT now(),
     CONSTRAINT "axes_user_pkey" PRIMARY KEY ("id")
 )
 WITHOUT OIDS;
